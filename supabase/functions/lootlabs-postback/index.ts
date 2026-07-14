@@ -1,0 +1,56 @@
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+
+const supabase = createClient(
+  Deno.env.get('SUPABASE_URL')!,
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
+)
+
+const POSTBACK_SECRET = Deno.env.get('POSTBACK_SECRET') ?? ''
+
+Deno.serve(async (req) => {
+  const url       = new URL(req.url)
+  const secret    = url.searchParams.get('secret') ?? ''
+  const click_id  = url.searchParams.get('click_id') ?? ''
+  const puid      = url.searchParams.get('puid') ?? click_id
+  const ip        = url.searchParams.get('ip') ?? ''
+  const unique_id = url.searchParams.get('unique_id') ?? ''
+
+  console.log('postback params:', { click_id, puid, ip, unique_id, full_url: req.url })
+
+  // Reject requests that don't carry the shared secret configured in LootLabs postback URL.
+  // This prevents anyone from faking task completions by hitting this endpoint directly.
+  if (!POSTBACK_SECRET || secret !== POSTBACK_SECRET)
+    return new Response('unauthorized', { status: 401 })
+
+  if (!puid)
+    return new Response('missing puid', { status: 400 })
+
+  // Get current token state
+  const { data: token, error: tokenErr } = await supabase
+    .from('lootlabs_tokens')
+    .select('tasks_required, tasks_completed, status')
+    .eq('puid', puid)
+    .maybeSingle()
+
+  if (tokenErr)
+    return new Response(`db error: ${tokenErr.message}`, { status: 500 })
+
+  if (!token || token.status !== 'pending')
+    return new Response('ok', { status: 200 })
+
+  const newCount = (token.tasks_completed ?? 0) + 1
+  const allDone  = newCount >= token.tasks_required
+
+  await supabase
+    .from('lootlabs_tokens')
+    .update({
+      tasks_completed: newCount,
+      status:      allDone ? 'verified' : 'pending',
+      ip,
+      unique_id,
+      ...(allDone ? { verified_at: new Date().toISOString() } : {}),
+    })
+    .eq('puid', puid)
+
+  return new Response('ok', { status: 200 })
+})
