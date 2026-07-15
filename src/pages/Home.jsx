@@ -35,7 +35,7 @@ export default function Home() {
       }
     } catch { localStorage.removeItem('seistem_key') }
 
-    fetch('https://api.github.com/repos/Seisen88/Key-System/releases/latest', {
+    fetch('https://api.github.com/repos/Seisen-z/Key-System/releases/latest', {
       headers: { 'Accept': 'application/vnd.github+json' }
     })
       .then(r => r.ok ? r.json() : null)
