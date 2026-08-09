@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
+import { supabase } from '../lib/supabase'
 
 /* ── Landing mockup data ── */
 const MOCK_ACCOUNTS = [
@@ -802,8 +803,12 @@ export default function Home() {
   const [appVersion,   setAppVersion]   = useState(undefined)
   const [downloading,  setDownloading]  = useState(false)
   const [demoOpen,     setDemoOpen]     = useState(false)
+  const [visitCount,   setVisitCount]   = useState(null)
+  const [downloadCount,setDownloadCount]= useState(null)
 
   useEffect(() => {
+    supabase.rpc('increment_visits').then(({ data }) => { if (data != null) setVisitCount(data) })
+    supabase.from('site_stats').select('downloads').eq('id', 1).single().then(({ data }) => { if (data != null) setDownloadCount(data.downloads) })
     fetch('https://api.github.com/repos/Seisen-z/Key-System/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
       .then(r => r.ok ? r.json() : null)
       .then(data => {
@@ -817,6 +822,7 @@ export default function Home() {
   const download = () => {
     if (!appVersion?.download_url || downloading) return
     setDownloading(true)
+    supabase.rpc('increment_downloads').then(({ data }) => { if (data != null) setDownloadCount(data) })
     const a = document.createElement('a')
     a.href = appVersion.download_url
     a.download = ''
@@ -854,6 +860,13 @@ export default function Home() {
               <div className="hero-meta">
                 <span className="hero-free">Free, always</span>
                 {appVersion && <span className="hero-ver">v{appVersion.version} · x64</span>}
+                {(visitCount != null || downloadCount != null) && (
+                  <span className="hero-ver">
+                    {visitCount != null && <>{visitCount.toLocaleString()} visits</>}
+                    {visitCount != null && downloadCount != null && ' · '}
+                    {downloadCount != null && <>{downloadCount.toLocaleString()} downloads</>}
+                  </span>
+                )}
               </div>
             </div>
           </div>
