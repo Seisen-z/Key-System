@@ -5,7 +5,7 @@ const supabase = createClient(
   Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
 )
 
-const SITE_URL          = Deno.env.get('SITE_URL')          ?? 'https://seistem.vercel.app'
+const SITE_URL          = Deno.env.get('SITE_URL')          ?? 'https://reiyaa.vercel.app'
 const WORKINK_API_KEY   = Deno.env.get('WORKINK_API_KEY')   ?? ''
 const LOOTLABS_API_KEY  = Deno.env.get('LOOTLABS_API_KEY')  ?? ''
 const LOCKR_API_KEY     = Deno.env.get('LOCKR_API_KEY')     ?? ''
