@@ -799,22 +799,29 @@ const FEATURES = [
 ]
 
 export default function Home() {
-  const [version,     setVersion]     = useState(null)
-  const [downloading, setDownloading] = useState(false)
-  const [demoOpen,    setDemoOpen]    = useState(false)
+  const [appVersion,   setAppVersion]   = useState(undefined)
+  const [downloading,  setDownloading]  = useState(false)
+  const [demoOpen,     setDemoOpen]     = useState(false)
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/Seisen-z/Reiya-Account-Manager/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+    fetch('https://api.github.com/repos/Seisen-z/Key-System/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
       .then(r => r.ok ? r.json() : null)
-      .then(data => { if (data) setVersion(data.tag_name.replace(/^v/i, '')) })
-      .catch(() => {})
+      .then(data => {
+        if (!data) { setAppVersion(null); return }
+        const exe = data.assets?.find(a => a.name.endsWith('.exe'))
+        setAppVersion(exe ? { version: data.tag_name.replace(/^v/i, ''), download_url: exe.browser_download_url } : null)
+      })
+      .catch(() => setAppVersion(null))
   }, [])
 
   const download = () => {
-    if (downloading) return
+    if (!appVersion?.download_url || downloading) return
     setDownloading(true)
-    window.location.href = '/api/download'
-    setTimeout(() => setDownloading(false), 4000)
+    const a = document.createElement('a')
+    a.href = appVersion.download_url
+    a.download = ''
+    a.click()
+    setTimeout(() => setDownloading(false), 3000)
   }
 
   return (
@@ -846,7 +853,7 @@ export default function Home() {
               <button className="hero-btn" onClick={download} disabled={downloading}><DlIcon />{downloading ? 'Starting download…' : 'Download for Windows'}</button>
               <div className="hero-meta">
                 <span className="hero-free">Free, always</span>
-                {version && <span className="hero-ver">v{version} · x64</span>}
+                {appVersion && <span className="hero-ver">v{appVersion.version} · x64</span>}
               </div>
             </div>
           </div>
