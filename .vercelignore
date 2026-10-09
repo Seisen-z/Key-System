@@ -1,0 +1,7 @@
+.admin-access.local
+.env*
+
+.git
+backup
+.codex-artifacts
+*.local

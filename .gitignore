@@ -3,3 +3,9 @@ dist
 .env
 .env.local
 .vercel
+
+.admin-access.local
+
+backup/
+.codex-artifacts/
+.vercel/

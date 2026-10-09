@@ -1,0 +1,334 @@
+{
+  "version": "1.1.17",
+  "source": "Actual desktop React components and CSS; only HashRouter and browser-native adapter substituted",
+  "files": [
+    {
+      "path": "src/App.tsx",
+      "sha256": "5eabb20c94fb24b09f585aa33cf684630c110a2662fda1f30b3785b0be7e0f7d"
+    },
+    {
+      "path": "src/components/AccBulkCookieModal.tsx",
+      "sha256": "7250f74f4a0ce0967c53c366b47830489e2d1aea4626387186cd23dfbb0ee323"
+    },
+    {
+      "path": "src/components/AccComboImportModal.tsx",
+      "sha256": "f3620f13797ab19dec7884610cab59a60e4e86759997d14e966018ac142c98a4"
+    },
+    {
+      "path": "src/components/AccountConfigSidebarModal.tsx",
+      "sha256": "1f0668ca41b507089f975192692b35dd5ee8d89213b37fd8eea73cee9987e495"
+    },
+    {
+      "path": "src/components/AccountDetailsDumpModal.tsx",
+      "sha256": "dd872b3b1d33c1a30e8fba5f34b3cf87c6f9edf87f6fd1d05627c97ec1368ea3"
+    },
+    {
+      "path": "src/components/AccountsHeaderBar.tsx",
+      "sha256": "6d205807b4c9de5bb6dcfcbcef2eb3019ec9220b152b3f2ff1d458fa70a4941b"
+    },
+    {
+      "path": "src/components/AccountSidebar.tsx",
+      "sha256": "e45b0d5ed0499a541f0b60df8505efea0d0a9b9bbce925e3ed0405a476d1ba26"
+    },
+    {
+      "path": "src/components/AccountsToolbar.tsx",
+      "sha256": "10fac9456891a2855aedcea37b883e66eb9f916779ce5f354d4689d9b6fafb73"
+    },
+    {
+      "path": "src/components/AccountUtilitiesMenuModal.tsx",
+      "sha256": "de092d9fb586e73decbeec18154d8daa9617f97b98aed0513e2ef5f8c507a088"
+    },
+    {
+      "path": "src/components/AccSingleCookieModal.tsx",
+      "sha256": "c2c21a6eaff434e3087fd3b3d16daf628998deb7605989f545654e858946de1b"
+    },
+    {
+      "path": "src/components/AccUtilitiesModal.tsx",
+      "sha256": "03a3dcb0dc62c36f4cc9be9c42ce02e77e61af6d95c54a24e20f6f8c689ec472"
+    },
+    {
+      "path": "src/components/ActivityPanel.tsx",
+      "sha256": "bc62ad4c0ee4047ee8f1862b49cd0ca34ca4c176487cb7a5c137c8242011a886"
+    },
+    {
+      "path": "src/components/AddAccountDisclosure.tsx",
+      "sha256": "4799e63e6caeacfec70feda865c947a14a49d0ac46a8116651c45ad977932667"
+    },
+    {
+      "path": "src/components/BulkActionBar.tsx",
+      "sha256": "95cb3cb2956d49642aa1945b88a086465cb452c9cc3dc0f0ef04c8155edfc0dc"
+    },
+    {
+      "path": "src/components/BulkCookieImportModal.tsx",
+      "sha256": "64ef58e22fe31fc82eb03ca359db14318e69da5124feac271bedcccb27e6666f"
+    },
+    {
+      "path": "src/components/BulkLaunchPresetModal.tsx",
+      "sha256": "682d7753046c7ef2e9a743bc223115672ac19736b91c4283ed1e3ed437b42302"
+    },
+    {
+      "path": "src/components/ComboImportModal.tsx",
+      "sha256": "3ef54078f65998fc30961f2eccb7c24f7204bc8a6ed6e5423670ed8aabcfa77b"
+    },
+    {
+      "path": "src/components/ComboResultsModal.tsx",
+      "sha256": "630c5c898dd9802567dcd2aff3ee4690772aeeafeafea64238f1586b16741eef"
+    },
+    {
+      "path": "src/components/CookieCheckAction.tsx",
+      "sha256": "5b653aaf95bb28df9608d77b5358f731b808c853774a2f7f1857cab54a832041"
+    },
+    {
+      "path": "src/components/EditAccountSettingsModal.tsx",
+      "sha256": "50b5b3c13ae103df68f5ba41fb8ff04ea9d2ace46bc5ee42efb6fa0b858ce58f"
+    },
+    {
+      "path": "src/components/ExportAccountsModal.tsx",
+      "sha256": "67cd8f2578ac1bce5c4d8d0cf182c69ef05828042a83eb3fc1df7e225d24b6d5"
+    },
+    {
+      "path": "src/components/HomeHeaderBar.tsx",
+      "sha256": "0ea366817330e7640c154298792a20ba22df8a78ef3cff49d3339ccd8c5c15be"
+    },
+    {
+      "path": "src/components/Icons.tsx",
+      "sha256": "f2c98b51ed29b26ad87e9ed3b85bdb35976726f06162d3cde50754020130675a"
+    },
+    {
+      "path": "src/components/ImportAccountsModal.tsx",
+      "sha256": "146098b45db5bc69fd8f2ffabe9840efd67f93c05e7248111cd48bbfe8997185"
+    },
+    {
+      "path": "src/components/LiveSessionsList.tsx",
+      "sha256": "2b5636a433e3c6ea5cbc54397bcba6d658d43fe1e779291460df51bf3486922b"
+    },
+    {
+      "path": "src/components/MoveToGroupModal.tsx",
+      "sha256": "9565b81a94df43535242d412644e76b86b67e2840ff08db6e3a41fd35ed74053"
+    },
+    {
+      "path": "src/components/PinnedAccountsHero.tsx",
+      "sha256": "f7aec8a222e3f17ca85495af4446c61da0fa9a54193345736f09fe46de2a993f"
+    },
+    {
+      "path": "src/components/PinnedGamesSection.tsx",
+      "sha256": "25d18f4f5712a05c25127ba286b2eabf200f2b8f7a0cb0559c3880304f0486cd"
+    },
+    {
+      "path": "src/components/PlayStatsModal.tsx",
+      "sha256": "80d761368dad43e9f2b031ee45fa8081abc0a7793269187845b7e640633e0939"
+    },
+    {
+      "path": "src/components/PremiumAutoBackup.tsx",
+      "sha256": "0203a117a77a0d316364b50c6953175ef976bd6512b6add8eec82ef2ec45e5c4"
+    },
+    {
+      "path": "src/components/PrivateServerSetupModal.tsx",
+      "sha256": "2c32ee7d47e24fac04a318ebc8b9ec7a231a4b1bccddb7afdc2ba0c8042829ac"
+    },
+    {
+      "path": "src/components/QuickLaunchModal.tsx",
+      "sha256": "0993069728b3b75d7867d85226e0462f5c4c27bfe0d10521f5b177c6590ebd90"
+    },
+    {
+      "path": "src/components/RateBanner.tsx",
+      "sha256": "bda20f44dce2ba20a0a4250407b0dd626702c1605976b82cbc699f21525ec310"
+    },
+    {
+      "path": "src/components/RecentGamesSection.tsx",
+      "sha256": "b6efac5a97f30b880cf4c67e838aae6ab21ee4a2a69dbcf3c12f0bc316bdffd0"
+    },
+    {
+      "path": "src/components/RemoveGameConfirmModal.tsx",
+      "sha256": "1b874f63c8d2818f04c691a7d3708a557ef7b8903051695317200d94df9ebb73"
+    },
+    {
+      "path": "src/components/SavePasswordPromptModal.tsx",
+      "sha256": "b7b19d0bb24ae23550f0f455b97104a7191f3766a2be83c10359568606495746"
+    },
+    {
+      "path": "src/components/SectionHeader.tsx",
+      "sha256": "38efa4f2a9e0a1c9a260a20fe672e4a38eb53cce723ef1acf78d7bc1d089cacb"
+    },
+    {
+      "path": "src/components/SelectedAccountHero.tsx",
+      "sha256": "a3cde01a49668eef56ad2e69840c81bcd02b71c2ced7bbd6e81fa7d286f15b5c"
+    },
+    {
+      "path": "src/components/SessionActivitySection.tsx",
+      "sha256": "ccc2e521c3c810098d156a44934d51379007351b16d94d8c6675d432ee52edef"
+    },
+    {
+      "path": "src/components/SessionDetailsModal.tsx",
+      "sha256": "e87da48c3ef4c12f675e13e8362af6a9012242b7b7c6f5629767fe1da933932f"
+    },
+    {
+      "path": "src/components/SessionGraph.tsx",
+      "sha256": "8824c58239f221fbd563f4983732215661b1196344ed18c8194990955ce0d6e6"
+    },
+    {
+      "path": "src/components/SetAccountGroupModal.tsx",
+      "sha256": "d452e513fd74450bc41656fef9412ad330dc3bc118699d08754101d91d3a7e8e"
+    },
+    {
+      "path": "src/components/Sidebar.tsx",
+      "sha256": "474952f583fbdfcc0065aeb02a071f7abaa97ef0acee380bef8a7dd08193fa77"
+    },
+    {
+      "path": "src/components/SingleCookieImportModal.tsx",
+      "sha256": "49de2513c1f2f4bfbf48d5a50775121345e4e00ecb09fe45f1098c9b4ac3e18a"
+    },
+    {
+      "path": "src/components/TitleBar.tsx",
+      "sha256": "08794a515945aef02f15fd871cf80fe29550182429971379d9a16259ea4eab26"
+    },
+    {
+      "path": "src/components/Toast.tsx",
+      "sha256": "1825319b6fa132a04ef837bc01e6a4f4314871900ba99b002553d7d74d16b0e4"
+    },
+    {
+      "path": "src/components/TopGamesByPlaytimeSection.tsx",
+      "sha256": "f11349154c1aab44a916efbb506f6bb59b55fa90e49f2b72c6da2ad9f57e528c"
+    },
+    {
+      "path": "src/components/ui/index.tsx",
+      "sha256": "19ee014d17258163287fed087cc94acbeae316a938b9c9801d06733ffb5b8f1e"
+    },
+    {
+      "path": "src/components/ui/map.tsx",
+      "sha256": "1342e81b15ee75dab465b733755d31ad45968a00a626a15bd60f04304a32f9f1"
+    },
+    {
+      "path": "src/components/ui/Tooltip.tsx",
+      "sha256": "7a7786ec4ecd651b21570c15ecb06aa9d1cc954e858058babb0f71beadeac847"
+    },
+    {
+      "path": "src/context/BootstrapperContext.tsx",
+      "sha256": "bed8eaeb6a590a23b063f155882e47208da8b6de874e0be964cbc155eae696eb"
+    },
+    {
+      "path": "src/context/holidayThemes.ts",
+      "sha256": "0f0acf4e5d58974e09bdd0ae4f943126f125c47c2b1b242715d3b2f5f365bcd2"
+    },
+    {
+      "path": "src/context/LanguageContext.tsx",
+      "sha256": "182b4164048a1982f31713879e6b8fc274d699f5ca8992098163eb42b541b9e7"
+    },
+    {
+      "path": "src/context/lunarNewYearDates.ts",
+      "sha256": "ba10c6b7b4712ea7c3a8a7d2716d7618f6128dd07480463ba3c919a8b8952921"
+    },
+    {
+      "path": "src/context/SavedGamesContext.tsx",
+      "sha256": "26fbb80bbfdef5029313c26de30f50fdd337b6eea47fb0f86dfebb64b98522dd"
+    },
+    {
+      "path": "src/context/seasonalTheme.ts",
+      "sha256": "d0dd9de09803baad999674836b59a6c692ea4fea31b66a6519d5625ca2775ba3"
+    },
+    {
+      "path": "src/context/ThemeContext.tsx",
+      "sha256": "d547daa255d7cd044beeac7da3ff5ddf1ffba4f78b16a4eb308f12a8a823183b"
+    },
+    {
+      "path": "src/context/UpdateContext.tsx",
+      "sha256": "59f9e2fad935808a8fbcc85167a3fdbb5bfadc974b7c9bc6794eb94c3be0d425"
+    },
+    {
+      "path": "src/data/catalog.ts",
+      "sha256": "6e9295fe99385c9fb68968f629c8ad030e219293b55190999a95cd17662ca90d"
+    },
+    {
+      "path": "src/data/changelog.ts",
+      "sha256": "ebe7f3f95def8875f0923c8b1741a13305b27678e31b89d881cca8487d8b1458"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "e8cefb01149958fe0359d7c7b2be7fabfef5fbfe1ebdd4fbb43e218bd2aea3e7"
+    },
+    {
+      "path": "src/lib/cloudRestorePreferences.ts",
+      "sha256": "01b7bffb8f344327e077a09293d7ab93c7ab12f0b1366092dcc3d6dd3d64ef0d"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "b456be7087dd45b5b90ecfa04e2f24f6e3c104211bd8250facc33814ca59111e"
+    },
+    {
+      "path": "src/pages/Accounts.tsx",
+      "sha256": "903344f7a0fa317a86a714bedfc7efd58b592a6487fe9eb85be8204e94d9a647"
+    },
+    {
+      "path": "src/pages/AppLock.tsx",
+      "sha256": "b6e5cf15561385d143fe306954b5ce2573bd71144e80a37c5683b02a94ebd892"
+    },
+    {
+      "path": "src/pages/Bootstrapper.tsx",
+      "sha256": "142910d4da60a2227455e686e8e66f90f1faa85e2673fb2b9104320eb7f64166"
+    },
+    {
+      "path": "src/pages/Changelog.tsx",
+      "sha256": "16ace15c34314b320c4b7bea7c3e679becd04707cb38e758be6b3cd2895545a5"
+    },
+    {
+      "path": "src/pages/Home.tsx",
+      "sha256": "b56acbdb1fe000b1c33b6ec39c895c020cca2d56910e2d427dd4865aad3d4b30"
+    },
+    {
+      "path": "src/pages/Hub.tsx",
+      "sha256": "0f6880a28f214d7a6ce26188a287765284d3a1d6c154242d15a8aacc767c4bcf"
+    },
+    {
+      "path": "src/pages/KeyGate.tsx",
+      "sha256": "6375f136301920a246ac8f81eb0e8b3f52c5edbbd2d6da5031b1e62f0a98473d"
+    },
+    {
+      "path": "src/pages/LaunchProgress.tsx",
+      "sha256": "153b4cabc47fdd5d4d3ba78cfa4179e383f6f410bf8105285b3cd9d740f9a3a2"
+    },
+    {
+      "path": "src/pages/Onboarding.tsx",
+      "sha256": "7a4eca5cc98505b4f6a6a27ccd6cbea8f31100105f5643f1241f28afa25492aa"
+    },
+    {
+      "path": "src/pages/Premium.tsx",
+      "sha256": "632513483f10ea486ac80a31ca9d65c2909a5191990bb3cf01ca90c5a2ebfd5a"
+    },
+    {
+      "path": "src/pages/Rscripts.tsx",
+      "sha256": "eccbe6930d7284e824808e5bf595c1bf696862f33bdde49b5dbe68e431656c3c"
+    },
+    {
+      "path": "src/pages/SecuritySetup.tsx",
+      "sha256": "3ffbc4dcbf336f9c0f64f6092c687c440409a05569b0c239290cf9a7fdadf739"
+    },
+    {
+      "path": "src/pages/Settings.tsx",
+      "sha256": "41b2799094638acfc8d0b923725cd5e3c9348d9bce6a1cac5da3570049fc5d55"
+    },
+    {
+      "path": "src/pages/Theme.tsx",
+      "sha256": "a15ee74f081ae5ca5746ebcfc27dba162ba47c1bfd7cc70a7c35f9d3ffb8cdac"
+    },
+    {
+      "path": "src/pages/UpdatePrompt.tsx",
+      "sha256": "2e9ca38a124510555df5257f28b1ca15c16788df40412accd25b6f7bc9eeaa94"
+    },
+    {
+      "path": "src/pages/Utilities.tsx",
+      "sha256": "5e2a83c58a14c1a083b033af2e7b1e083e95de9b89a5193fdde4d7f5c3fea51d"
+    },
+    {
+      "path": "src/pages/VaultUnlock.tsx",
+      "sha256": "421e1c241d565ecbc4decb20ae21e91e82002bd4f8cbf407e2989d8ca0bbd100"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "sha256": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92"
+    }
+  ]
+}

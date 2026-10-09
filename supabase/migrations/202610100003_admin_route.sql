@@ -1,0 +1,13 @@
+﻿begin;
+create table if not exists public.reiya_admin_settings (key text primary key,value text not null,updated_at timestamptz not null default now(),check(key<>'admin_path' or (value ~ '^/[A-Za-z0-9_-]{3,80}$' and value not in ('/premium','/terms','/tos','/admin','/api','/legal'))));
+alter table public.reiya_admin_settings enable row level security;
+revoke all on public.reiya_admin_settings from public,anon,authenticated;
+grant all on public.reiya_admin_settings to service_role;
+insert into public.reiya_admin_settings(key,value) values('admin_path','/admin23292') on conflict(key) do nothing;
+create or replace function public.reiya_admin_route(p_path text) returns boolean language sql security definer set search_path=public as $$ select exists(select 1 from reiya_admin_settings where key='admin_path' and value=p_path) $$;
+create or replace function public.reiya_admin_route_changed() returns trigger language plpgsql security definer set search_path=public as $$ begin new.updated_at:=now();if new.key='admin_path' and new.value is distinct from old.value then delete from reiya_admin_sessions;insert into reiya_admin_audit(action) values('portal.path.changed');end if;return new;end $$;
+drop trigger if exists reiya_admin_path_rotation on public.reiya_admin_settings;
+create trigger reiya_admin_path_rotation before update of value on public.reiya_admin_settings for each row execute function public.reiya_admin_route_changed();
+revoke all on function public.reiya_admin_route(text),public.reiya_admin_route_changed() from public,anon,authenticated;
+grant execute on function public.reiya_admin_route(text) to service_role;
+commit;
