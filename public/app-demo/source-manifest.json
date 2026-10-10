@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "src/App.tsx",
-      "sha256": "2c6620ece0b1eb47db33f5a48660d11fd6b1d6173068c8dc2f9b5b38073530f4"
+      "sha256": "eb6577383cfb61ef3f353397ce1a58b5b4feda10530d3afdb6b0ac1ba6d5ceaf"
     },
     {
       "path": "src/components/AccBulkCookieModal.tsx",
@@ -120,7 +120,7 @@
     },
     {
       "path": "src/components/PremiumAutoBackup.tsx",
-      "sha256": "b35d2249bb3a7a89799e86d14bd2af6b7f66ac56224e245ffd1448f58566a94e"
+      "sha256": "bce5a51c8235946eaa8f753fab7906f9dc4389cf67678ffaa168fec41e95c23b"
     },
     {
       "path": "src/components/PrivateServerSetupModal.tsx",
@@ -240,7 +240,7 @@
     },
     {
       "path": "src/data/changelog.ts",
-      "sha256": "e024b758960a0cda6a1412588abffda28ae2416429254113ff92a123eee4d14b"
+      "sha256": "40f295c7581905a98ff7cbb9342dec3349445216e063180b37088c9ac13cf008"
     },
     {
       "path": "src/index.css",
@@ -296,7 +296,7 @@
     },
     {
       "path": "src/pages/Premium.tsx",
-      "sha256": "abd1d5f6dfa81f79ee25b4b417c622698abc21c669afd413b560599ef4ca1071"
+      "sha256": "f9a9181fcd7673da4c8d746ea5acbb97553842e328cf095405fd235cd0c272c5"
     },
     {
       "path": "src/pages/Rscripts.tsx",
