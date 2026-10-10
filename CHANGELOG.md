@@ -1,5 +1,16 @@
 # Reiya website changelog
 
+## v1.1.19 - 2026-10-10
+
+### Added
+- St. Patrick's Day repeats automatically on March 17 every year, with cartoon shamrocks, a lucky hat and gold coins. Manual selection is available in the Theme tab.
+
+### Improved
+- Refined all eight seasonal palettes with distinct holiday colors, coordinated buttons/inputs and readable text.
+- Halloween now uses warm charcoal and pumpkin orange instead of purple panels.
+- Preserved secondary accent colors and fixed seasonal navigation hover/active contrast.
+- Existing annual schedules and nonseasonal themes remain unchanged.
+
 ## v1.1.18 - 2026-10-10
 
 ### Added

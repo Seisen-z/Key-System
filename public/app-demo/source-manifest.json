@@ -1,5 +1,5 @@
 {
-  "version": "1.1.18",
+  "version": "1.1.19",
   "source": "Actual desktop React components and CSS; only HashRouter and browser-native adapter substituted",
   "files": [
     {
@@ -208,7 +208,7 @@
     },
     {
       "path": "src/context/holidayThemes.ts",
-      "sha256": "0f0acf4e5d58974e09bdd0ae4f943126f125c47c2b1b242715d3b2f5f365bcd2"
+      "sha256": "0045cff5ed15771fe71962558dbc4ba96a0c89fb7f11b55002f4c06a04ee4be0"
     },
     {
       "path": "src/context/LanguageContext.tsx",
@@ -224,11 +224,11 @@
     },
     {
       "path": "src/context/seasonalTheme.ts",
-      "sha256": "d0dd9de09803baad999674836b59a6c692ea4fea31b66a6519d5625ca2775ba3"
+      "sha256": "236ceaa91a82ab82451d0511b4f9b96a9898ac800f2272dd7ccfca61c0b66f53"
     },
     {
       "path": "src/context/ThemeContext.tsx",
-      "sha256": "d547daa255d7cd044beeac7da3ff5ddf1ffba4f78b16a4eb308f12a8a823183b"
+      "sha256": "573afa68f524a9fb5a9dc8e461ab155f5e46765a5815c97e3b01429a8f68ceb7"
     },
     {
       "path": "src/context/UpdateContext.tsx",
@@ -240,11 +240,11 @@
     },
     {
       "path": "src/data/changelog.ts",
-      "sha256": "40f295c7581905a98ff7cbb9342dec3349445216e063180b37088c9ac13cf008"
+      "sha256": "f86623c1610cc79a6e0325ac16196e07cd5fb37c7372c869a677f03f6cb725b5"
     },
     {
       "path": "src/index.css",
-      "sha256": "e8cefb01149958fe0359d7c7b2be7fabfef5fbfe1ebdd4fbb43e218bd2aea3e7"
+      "sha256": "51cb46ebf2c0c19a0b8fa83e2b132c47952821a322f1ce05503db1803fa7551f"
     },
     {
       "path": "src/lib/cloudRestorePreferences.ts",
