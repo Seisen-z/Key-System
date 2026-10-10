@@ -12,7 +12,7 @@ export async function invoke(command,args={}){
 const a=accounts.find(x=>x.user_id===(args.userId??args.user_id));
 switch(command){
 case 'get_accounts':return structuredClone(accounts);case 'get_live_sessions':return structuredClone(sessions);case 'get_settings':return structuredClone(settings);case 'save_settings':settings={...settings,...args.settings};return;
-case 'get_security_mode':return 'default';case 'get_app_version':return '1.1.17';case 'check_for_update':return {has_update:false,current:'1.1.17',version:'1.1.17',download_url:'',notes:''};case 'get_live_count':return 0;case 'get_rating_stats':return {average:0,count:0};
+case 'premium_refund_check':return {erased:false};case 'premium_refund_ack':return null;case 'get_security_mode':return 'default';case 'get_app_version':return '1.1.18';case 'check_for_update':return {has_update:false,current:'1.1.18',version:'1.1.18',download_url:'',notes:''};case 'get_live_count':return 0;case 'get_rating_stats':return {average:0,count:0};
 case 'get_favorites':case 'get_recent_games':return structuredClone(favorites);case 'save_favorites':favorites=args.favorites;return;
 case 'get_event_log':case 'get_session_history':case 'get_fastflag_presets':case 'get_roblox_deploy_history':case 'list_installed_roblox_versions':return [];
 case 'get_fastflags':return {};case 'save_fastflags':return;case 'get_launcher_preference':return launcher;case 'set_launcher_preference':launcher=args.kind;return;case 'get_auto_update_preference':return false;case 'set_auto_update_preference':return;
@@ -22,7 +22,7 @@ case 'detect_roblox_installs':return {installs:[],protocol_handler_path:null};ca
 case 'toggle_favorite':if(a)a.is_favorite=!a.is_favorite;return structuredClone(a);case 'update_account_notes':if(a)a.notes=args.notes;return structuredClone(a);case 'set_account_group':if(a)a.group=args.group;return structuredClone(a);case 'validate_cookie':if(a)a.cookie_status='Valid';return structuredClone(a);case 'remove_account':accounts=accounts.filter(x=>x!==a);return;
 case 'launch_account':announce('Demo only: no Roblox process was launched.');return;case 'check_account_health':return 'Example account — no real cookie';
 case 'fetch_thumbnails':case 'fetch_place_thumbnails':return Object.fromEntries(favorites.map(x=>[x.placeId,x.iconUrl]));case 'fetch_place_details':return {name:'Example Obby',place_id:1001,universe_id:1001,creator_name:'Demo creator',icon_url:favorites[0]?.iconUrl||''};case 'search_roblox_games':return favorites.map(g=>({name:g.name,place_id:Number(g.placeId),universe_id:Number(g.placeId),creator_name:g.creator,icon_url:g.iconUrl}));case 'fetch_active_servers':return [];
-case 'premium_restore_preferences':return null;case 'premium_status':return {premium:false};case 'premium_backups':return [];
+case 'premium_restore_preferences':return null;case 'premium_status':return new URLSearchParams(location.search).get('premium_state')==='expired'?{premium:false,state:'expired',expires_at:'2026-01-01T00:00:00Z'}:{premium:false,state:'free'};case 'premium_backups':return [];
 case 'rscript_search':case 'rscript_trending':return {scripts:[],data:[],pagination:{page:1,totalPages:1,total:0,hasNextPage:false,hasPrevPage:false}};
 case 'update_discord_rpc':case 'start_discord_rpc':case 'stop_discord_rpc':case 'clear_game_rpc':case 'send_heartbeat':case 'add_recent_game':case 'set_private_server':return;
 default:announce('This action needs the desktop app: '+command);throw new Error('Browser demo: native action is disabled.');

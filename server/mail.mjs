@@ -1,0 +1,4 @@
+import nodemailer from 'nodemailer';
+import {HttpError} from './premium.mjs';
+export function mailConfigured(){return ['SMTP_HOST','SMTP_PORT','SMTP_USER','SMTP_PASS','SMTP_FROM'].every(k=>process.env[k]);}
+export async function sendMail(to,subject,text){if(!mailConfigured())throw new HttpError(503,'Email delivery is not configured yet. Contact Reiya support.');const port=Number(process.env.SMTP_PORT),secure=process.env.SMTP_SECURE==='true';if(!secure&&port!==587)throw new HttpError(503,'Use TLS SMTP port 465 or STARTTLS port 587');const smtp=nodemailer.createTransport({host:process.env.SMTP_HOST,port,secure,requireTLS:!secure,auth:{user:process.env.SMTP_USER,pass:process.env.SMTP_PASS},tls:{rejectUnauthorized:true},connectionTimeout:10000,socketTimeout:15000});try{await smtp.sendMail({from:{name:'Reiya',address:process.env.SMTP_FROM},to,subject,text});}catch{throw new HttpError(503,'Email delivery failed. Try again later.');}finally{smtp.close();}}

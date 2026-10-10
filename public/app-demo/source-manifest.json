@@ -1,10 +1,10 @@
 {
-  "version": "1.1.17",
+  "version": "1.1.18",
   "source": "Actual desktop React components and CSS; only HashRouter and browser-native adapter substituted",
   "files": [
     {
       "path": "src/App.tsx",
-      "sha256": "5eabb20c94fb24b09f585aa33cf684630c110a2662fda1f30b3785b0be7e0f7d"
+      "sha256": "2c6620ece0b1eb47db33f5a48660d11fd6b1d6173068c8dc2f9b5b38073530f4"
     },
     {
       "path": "src/components/AccBulkCookieModal.tsx",
@@ -120,7 +120,7 @@
     },
     {
       "path": "src/components/PremiumAutoBackup.tsx",
-      "sha256": "0203a117a77a0d316364b50c6953175ef976bd6512b6add8eec82ef2ec45e5c4"
+      "sha256": "b35d2249bb3a7a89799e86d14bd2af6b7f66ac56224e245ffd1448f58566a94e"
     },
     {
       "path": "src/components/PrivateServerSetupModal.tsx",
@@ -240,7 +240,7 @@
     },
     {
       "path": "src/data/changelog.ts",
-      "sha256": "ebe7f3f95def8875f0923c8b1741a13305b27678e31b89d881cca8487d8b1458"
+      "sha256": "e024b758960a0cda6a1412588abffda28ae2416429254113ff92a123eee4d14b"
     },
     {
       "path": "src/index.css",
@@ -296,7 +296,7 @@
     },
     {
       "path": "src/pages/Premium.tsx",
-      "sha256": "632513483f10ea486ac80a31ca9d65c2909a5191990bb3cf01ca90c5a2ebfd5a"
+      "sha256": "abd1d5f6dfa81f79ee25b4b417c622698abc21c669afd413b560599ef4ca1071"
     },
     {
       "path": "src/pages/Rscripts.tsx",

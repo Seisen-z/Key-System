@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
       for (const [key, value] of Object.entries(environment)) process.env[key] = value;
       server.middlewares.use((req, res, next) => {
         const url = new URL(req.url || '/', 'http://localhost');
-        if (!['/api/premium','/api/admin'].includes(url.pathname)) return next();
+        if (!['/api/premium','/api/admin','/api/customer'].includes(url.pathname)) return next();
         req.query = Object.fromEntries(url.searchParams);
         req.premiumLocalTest = true;
         res.status = code => { res.statusCode = code; return res; };
