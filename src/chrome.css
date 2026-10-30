@@ -155,3 +155,33 @@
 
 /* Premium page: the lead paragraph should align with the headline above it */
 .premium-marketing .premium-story .lead { margin-left: 0; padding-left: 0; max-width: 540px; }
+
+/* ── Premium page: Plans / My account switch ── */
+.premium-tabs-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 24px; padding-bottom: 4px; }
+.premium-tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 18px;
+  background: #dfece4;
+  box-shadow: inset 3px 3px 7px rgba(48, 96, 68, .15), inset -3px -3px 7px rgba(255, 255, 255, .85);
+}
+.premium-tabs a {
+  padding: 10px 22px;
+  border-radius: 14px;
+  color: #3f5a49;
+  font-size: 14px;
+  font-weight: 650;
+  transition: background .15s, color .15s;
+}
+.premium-tabs a:hover { color: #173a2a; }
+.premium-tabs a[aria-current] {
+  background: #f6fbf7;
+  color: #173a2a;
+  font-weight: 750;
+  box-shadow: 3px 4px 9px rgba(48, 96, 68, .22), -2px -2px 6px rgba(255, 255, 255, .9);
+}
+.premium-tabs a:focus-visible { outline: 3px solid #165b3d; outline-offset: 2px; }
+.premium-tabs-row > p { margin: 0; color: #56705f; font-size: 13px; }
+@media (max-width: 700px) { .premium-tabs-row > p { display: none; } }
+@media (prefers-reduced-motion: reduce) { .premium-tabs a { transition: none; } }
