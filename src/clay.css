@@ -1,0 +1,206 @@
+/* Soft clay layer for the public pages (Home and Premium).
+   Loaded after index.css. Delete this file and its import in main.jsx to return to the flat look.
+   Kept deliberately gentle: small radii, one low drop shadow and a faint inset, so surfaces feel
+   pressed from clay without looking inflated. The dark-green Premium band is left as designed. */
+
+.green-home,
+.premium-marketing {
+  --clay-ink: #173a2a;
+  --clay-text: #3f5a49;
+  --clay-bg: #eaf3ed;
+  --clay-bg-2: #e0ede4;
+  --clay-card: #f6fbf7;
+  --clay-shade: rgba(48, 96, 68, .17);
+  --clay-shade-soft: rgba(48, 96, 68, .08);
+  --clay-out: 6px 8px 18px var(--clay-shade), -5px -5px 14px rgba(255, 255, 255, .85);
+  --clay-in: inset 2px 2px 5px rgba(255, 255, 255, .85), inset -3px -4px 8px var(--clay-shade-soft);
+  --clay-out-sm: 4px 5px 11px var(--clay-shade), -3px -3px 9px rgba(255, 255, 255, .85);
+  --clay-in-sm: inset 2px 2px 4px rgba(255, 255, 255, .85), inset -2px -3px 6px var(--clay-shade-soft);
+  background: var(--clay-bg);
+}
+
+/* ── Home section backgrounds ── */
+.green-home .feature-studio { background: var(--clay-bg); }
+.green-home .capabilities-section { background: var(--clay-bg-2); }
+.green-home .studio-heading h2,
+.green-home .capabilities-intro h2 { color: var(--clay-ink); }
+
+/* ── Buttons: rounded and slightly pressable ── */
+.green-home .button,
+.green-home .download-section .button,
+.premium-marketing .button {
+  border: 0;
+  border-radius: 16px;
+  min-height: 50px;
+  transition: transform .15s, box-shadow .15s, background .15s;
+}
+.green-home .button.dark,
+.premium-marketing .button.dark {
+  background: #2f7a53;
+  color: #fff;
+  box-shadow: 5px 7px 14px rgba(36, 92, 62, .28), inset 2px 2px 5px rgba(255, 255, 255, .3), inset -3px -4px 7px rgba(0, 0, 0, .14);
+}
+.green-home .button.dark:hover:not(:disabled),
+.premium-marketing .button.dark:hover:not(:disabled) { background: #348a5c; transform: translateY(-2px); }
+.green-home .button.orange,
+.premium-marketing .button.orange {
+  background: #f09a63;
+  color: #3a2410;
+  box-shadow: 5px 7px 14px rgba(190, 100, 40, .25), inset 2px 2px 5px rgba(255, 255, 255, .4), inset -3px -4px 7px rgba(150, 70, 20, .16);
+}
+.green-home .button.outline,
+.premium-marketing .button.outline {
+  background: var(--clay-card);
+  color: var(--clay-ink);
+  box-shadow: var(--clay-out-sm), var(--clay-in-sm);
+}
+.green-home .button:active:not(:disabled),
+.premium-marketing .button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 1px 2px 5px var(--clay-shade), inset 3px 3px 7px rgba(0, 0, 0, .16);
+}
+.green-home .button:focus-visible,
+.premium-marketing .button:focus-visible { outline: 3px solid #165b3d; outline-offset: 4px; }
+
+/* ── Capabilities: soft tiles instead of ruled columns ── */
+.green-home .capabilities-grid { gap: 22px; }
+.green-home .capabilities-grid article {
+  position: relative;
+  padding: 26px 26px 24px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--clay-card);
+  box-shadow: var(--clay-out), var(--clay-in);
+  transition: transform .2s ease;
+}
+.green-home .capabilities-grid article:hover { transform: translateY(-2px); }
+.green-home .capabilities-grid article > span {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 99px;
+  background: var(--clay-bg-2);
+  color: #2f6b4a;
+  font-family: Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.green-home .capabilities-grid h3 { margin: 15px 0 9px; color: var(--clay-ink); font-size: 18px; font-weight: 750; }
+.green-home .capabilities-grid p { color: var(--clay-text); font-size: 13px; line-height: 1.75; }
+
+/* ── Laptop showcase ── */
+.green-home .laptop-stage::before {
+  inset: 0 -3% 6%;
+  border-radius: 34px;
+  background: var(--clay-bg-2);
+  box-shadow: inset 5px 5px 12px var(--clay-shade-soft), inset -5px -5px 12px rgba(255, 255, 255, .85);
+}
+.green-home .laptop-lid { border-radius: 22px 22px 6px 6px; box-shadow: 0 26px 40px -24px rgba(23, 58, 42, .5); }
+.green-home .laptop-screen { border-radius: 10px; }
+.green-home .float-card {
+  border: 0;
+  border-radius: 20px;
+  background: var(--clay-card);
+  box-shadow: var(--clay-out), var(--clay-in);
+}
+.green-home .float-top small { border: 0; background: var(--clay-bg-2); }
+.green-home .float-bar { background: var(--clay-bg-2); }
+.green-home .laptop-stage figcaption { color: #56705f; }
+
+/* ── Hero strip and download card ── */
+.green-home .play-benefits {
+  border: 0;
+  border-radius: 22px;
+  background: var(--clay-card);
+  box-shadow: var(--clay-out), var(--clay-in);
+}
+.green-home .download-section {
+  width: calc(100% - 9vw);
+  max-width: 1300px;
+  margin: 50px auto 80px;
+  padding-left: clamp(28px, 5vw, 80px);
+  padding-right: clamp(28px, 5vw, 80px);
+  border-radius: 30px;
+  background: var(--clay-card);
+  box-shadow: var(--clay-out), var(--clay-in);
+}
+
+/* ── Home: dark-green Premium band keeps its own palette; only the hook and CTA get attention ── */
+.premium-showcase h2 { line-height: 1.08; }
+.premium-showcase-cta {
+  border-radius: 16px;
+  box-shadow: 5px 7px 16px rgba(0, 0, 0, .28), inset 2px 2px 5px rgba(255, 255, 255, .55), inset -3px -4px 7px rgba(23, 76, 49, .14);
+  transition: transform .15s;
+}
+.premium-showcase-cta:hover { transform: translateY(-2px); }
+.premium-showcase-cta:focus-visible { outline: 3px solid #dfefe0; outline-offset: 4px; }
+.premium-showcase .backup-flow { border-radius: 24px; }
+
+/* ── Premium page ── */
+.premium-marketing .premium-story h1 em { color: #2f7a53; }
+.premium-marketing .pricing-selector {
+  border: 0;
+  border-radius: 26px;
+  background: var(--clay-bg-2);
+  box-shadow: var(--clay-out), var(--clay-in);
+}
+.premium-marketing .selectable-plan {
+  border: 0;
+  border-radius: 18px;
+  background: var(--clay-card);
+  box-shadow: var(--clay-out-sm), var(--clay-in-sm);
+}
+.premium-marketing .selectable-plan.selected { box-shadow: var(--clay-out-sm), 0 0 0 2px #3b8257; }
+.premium-marketing .backup-manifest {
+  padding: 20px 22px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--clay-card);
+  box-shadow: var(--clay-out), var(--clay-in);
+}
+.premium-marketing .steps-grid { gap: 22px; }
+.premium-marketing .steps-grid article {
+  padding: 26px;
+  border-radius: 22px;
+  background: var(--clay-card);
+  box-shadow: var(--clay-out), var(--clay-in);
+}
+.premium-marketing .steps-grid h3 { margin: 18px 0 10px; color: var(--clay-ink); }
+.premium-marketing .steps-grid p { color: var(--clay-text); }
+.premium-marketing .step-number {
+  display: inline-grid;
+  place-items: center;
+  min-width: 40px;
+  height: 32px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 99px;
+  background: var(--clay-bg-2);
+  color: #2f6b4a;
+  font-weight: 700;
+}
+.premium-marketing .faq-section details {
+  margin-bottom: 12px;
+  padding: 4px 20px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--clay-card);
+  box-shadow: var(--clay-out-sm), var(--clay-in-sm);
+}
+.premium-marketing .faq-section details summary { padding: 14px 0; }
+
+@media (max-width: 900px) {
+  .green-home .laptop-stage::before { inset: 0 -2% 10%; }
+  .green-home .download-section { width: calc(100% - 28px); margin: 30px auto 50px; border-radius: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .green-home .capabilities-grid article,
+  .green-home .button,
+  .premium-marketing .button,
+  .premium-showcase-cta { transition: none; }
+  .green-home .capabilities-grid article:hover,
+  .green-home .button:hover:not(:disabled),
+  .premium-marketing .button:hover:not(:disabled),
+  .premium-showcase-cta:hover { transform: none; }
+}
