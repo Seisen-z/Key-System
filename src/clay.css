@@ -21,9 +21,7 @@
 
 /* ── Home section backgrounds ── */
 .green-home .feature-studio { background: var(--clay-bg); }
-.green-home .capabilities-section { background: var(--clay-bg-2); }
-.green-home .studio-heading h2,
-.green-home .capabilities-intro h2 { color: var(--clay-ink); }
+.green-home .studio-heading h2 { color: var(--clay-ink); }
 
 /* ── Buttons: rounded and slightly pressable ── */
 .green-home .button,
@@ -62,32 +60,6 @@
 .green-home .button:focus-visible,
 .premium-marketing .button:focus-visible { outline: 3px solid #165b3d; outline-offset: 4px; }
 
-/* ── Capabilities: soft tiles instead of ruled columns ── */
-.green-home .capabilities-grid { gap: 22px; }
-.green-home .capabilities-grid article {
-  position: relative;
-  padding: 26px 26px 24px;
-  border: 0;
-  border-radius: 22px;
-  background: var(--clay-card);
-  box-shadow: var(--clay-out), var(--clay-in);
-  transition: transform .2s ease;
-}
-.green-home .capabilities-grid article:hover { transform: translateY(-2px); }
-.green-home .capabilities-grid article > span {
-  display: inline-block;
-  padding: 5px 12px;
-  border-radius: 99px;
-  background: var(--clay-bg-2);
-  color: #2f6b4a;
-  font-family: Arial, sans-serif;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: .02em;
-}
-.green-home .capabilities-grid h3 { margin: 15px 0 9px; color: var(--clay-ink); font-size: 18px; font-weight: 750; }
-.green-home .capabilities-grid p { color: var(--clay-text); font-size: 13px; line-height: 1.75; }
-
 /* ── Laptop showcase ── */
 .green-home .laptop-stage::before {
   inset: 0 -3% 6%;
@@ -124,17 +96,6 @@
   background: var(--clay-card);
   box-shadow: var(--clay-out), var(--clay-in);
 }
-
-/* ── Home: dark-green Premium band keeps its own palette; only the hook and CTA get attention ── */
-.premium-showcase h2 { line-height: 1.08; }
-.premium-showcase-cta {
-  border-radius: 16px;
-  box-shadow: 5px 7px 16px rgba(0, 0, 0, .28), inset 2px 2px 5px rgba(255, 255, 255, .55), inset -3px -4px 7px rgba(23, 76, 49, .14);
-  transition: transform .15s;
-}
-.premium-showcase-cta:hover { transform: translateY(-2px); }
-.premium-showcase-cta:focus-visible { outline: 3px solid #dfefe0; outline-offset: 4px; }
-.premium-showcase .backup-flow { border-radius: 24px; }
 
 /* ── Premium page ── */
 .premium-marketing .premium-story h1 em { color: #2f7a53; }
@@ -195,12 +156,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .green-home .capabilities-grid article,
   .green-home .button,
-  .premium-marketing .button,
-  .premium-showcase-cta { transition: none; }
-  .green-home .capabilities-grid article:hover,
+  .premium-marketing .button { transition: none; }
   .green-home .button:hover:not(:disabled),
-  .premium-marketing .button:hover:not(:disabled),
-  .premium-showcase-cta:hover { transform: none; }
+  .premium-marketing .button:hover:not(:disabled) { transform: none; }
 }
