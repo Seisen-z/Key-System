@@ -1,5 +1,23 @@
 # Reiya website changelog
 
+## v1.2.0 - 2026-10-31
+
+### Added
+- Bulk edit: select several accounts and set their game, launcher, startup delay, favorite games, notes and tags in one step.
+- Favorite-games filter on the Accounts tab to find the accounts that have a game saved.
+
+### Improved
+- Safer updates: Reiya only installs updates from the official release channel and checks each installer's digital signature before running it.
+- Stronger account protection: cookies are encrypted with a key protected by your Windows login, and existing accounts are upgraded automatically.
+- Saved passwords stay inside the app's secure side; Copy password clears the clipboard after 30 seconds.
+- Backups use a password you choose (8+ characters) with much stronger key derivation, and restore on a fresh Windows install. Older backups still import.
+- Vault password lock needs 8+ characters, slows repeated wrong attempts and can only be reset from the lock screen.
+- Cleaner Accounts tab with compact cards and rows, and easier-to-read text with visible keyboard focus.
+
+### Fixed
+- A damaged accounts file is set aside instead of being overwritten, and a rolling backup is kept.
+- The online count in the app now shows only real users.
+
 ## v1.1.19 - 2026-10-10
 
 ### Added
