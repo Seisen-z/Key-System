@@ -7,6 +7,7 @@ import './index.css'
 import './clay.css'
 import './sections.css'
 import './type.css'
+import './chrome.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>

@@ -1,0 +1,157 @@
+/* Site header and footer. Same soft clay language as the Home page, kept light.
+   Loaded last so it wins over the older flat rules in index.css. */
+
+.site-nav,
+.site-footer {
+  --c-ink: #173a2a;
+  --c-text: #3f5a49;
+  --c-card: #f6fbf7;
+  --c-chip: #e0ede4;
+  --c-shade: rgba(48, 96, 68, .17);
+  --c-out: 5px 7px 16px var(--c-shade), -4px -4px 12px rgba(255, 255, 255, .85);
+  --c-in: inset 2px 2px 5px rgba(255, 255, 255, .85), inset -3px -4px 8px rgba(48, 96, 68, .08);
+}
+
+/* ── Header ── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 12px 4.5vw;
+  border: 0;
+  background: transparent;
+  pointer-events: none;
+}
+.site-nav .nav-pill {
+  pointer-events: auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 14px 10px 20px;
+  border-radius: 24px;
+  background: var(--c-card);
+  box-shadow: var(--c-out), var(--c-in);
+}
+.site-nav .brand {
+  gap: 10px;
+  font-family: var(--display, 'Fredoka Variable', Arial, sans-serif);
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--c-ink);
+}
+.site-nav .brand img { width: 36px; height: 36px; }
+.site-nav .nav-main {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  text-transform: none;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.site-nav .nav-main a {
+  padding: 9px 16px;
+  border-radius: 14px;
+  color: var(--c-text);
+  transition: background .15s, color .15s;
+}
+.site-nav .nav-main a:hover { background: var(--c-chip); color: var(--c-ink); }
+.site-nav .nav-main a[aria-current] {
+  background: var(--c-chip);
+  color: var(--c-ink);
+  font-weight: 750;
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, .8), inset -2px -3px 5px rgba(48, 96, 68, .1);
+}
+.site-nav .nav-actions { display: flex; align-items: center; gap: 14px; }
+.site-nav .nav-community { padding: 9px 6px; color: var(--c-text); font-size: 14px; font-weight: 600; }
+.site-nav .nav-community:hover { color: var(--c-ink); }
+
+/* Shared green button used by the header and footer */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 16px;
+  background: #2f7a53;
+  color: #fff;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 750;
+  box-shadow: 4px 6px 12px rgba(36, 92, 62, .28), inset 2px 2px 5px rgba(255, 255, 255, .3), inset -3px -4px 7px rgba(0, 0, 0, .14);
+  transition: transform .15s, background .15s;
+}
+.nav-cta:hover { background: #348a5c; transform: translateY(-1px); }
+.nav-cta:active { transform: translateY(1px); }
+.site-nav a:focus-visible,
+.site-footer a:focus-visible { outline: 3px solid #165b3d; outline-offset: 3px; border-radius: 12px; }
+
+/* ── Footer ── */
+.site-footer {
+  display: block;
+  padding: 30px 4.5vw 44px;
+  border: 0;
+  background: transparent;
+}
+.site-footer .footer-card {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 36px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 44px 28px;
+  border-radius: 28px;
+  background: var(--c-card);
+  box-shadow: var(--c-out), var(--c-in);
+}
+.footer-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.site-footer .brand {
+  gap: 10px;
+  font-family: var(--display, 'Fredoka Variable', Arial, sans-serif);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--c-ink);
+}
+.site-footer .brand img { width: 38px; height: 38px; }
+.site-footer .footer-brand p { margin: 0; color: var(--c-text); font-size: 14px; }
+.site-footer .footer-col { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; font-size: 14px; }
+.site-footer .footer-col h3 { margin-bottom: 8px; color: var(--c-ink); font-size: 13px; font-weight: 800; letter-spacing: .02em; }
+.site-footer .footer-col a { padding: 5px 0; color: var(--c-text); }
+.site-footer .footer-col a:hover { color: var(--c-ink); text-decoration: underline; text-underline-offset: 4px; }
+.site-footer .footer-fine {
+  grid-column: 1 / -1;
+  margin: 8px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #d5e4da;
+  color: #56705f;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .site-nav { padding: 10px 14px; }
+  .site-nav .nav-pill { grid-template-columns: auto 1fr auto; gap: 10px; padding: 8px 10px 8px 14px; border-radius: 20px; }
+  .site-nav .nav-main { justify-content: flex-end; }
+  .site-nav .nav-main a:not([href='/premium']) { display: none; }
+  .site-nav .nav-community { display: none; }
+  .site-footer { padding: 20px 14px 32px; }
+  .site-footer .footer-card { grid-template-columns: 1fr 1fr; padding: 30px 24px 22px; }
+  .site-footer .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+  .site-nav .brand { font-size: 23px; }
+  .site-nav .brand img { width: 30px; height: 30px; }
+  .nav-cta { padding: 10px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-cta, .site-nav .nav-main a { transition: none; }
+  .nav-cta:hover { transform: none; }
+}
+
+/* Premium page: the lead paragraph should align with the headline above it */
+.premium-marketing .premium-story .lead { margin-left: 0; padding-left: 0; max-width: 540px; }
